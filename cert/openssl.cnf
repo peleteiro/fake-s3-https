@@ -1,0 +1,26 @@
+[req]
+distinguished_name     = req_distinguished_name
+
+[req_distinguished_name]
+countryName = BR
+countryName_default = BR
+stateOrProvinceName = Rio de Janeiro
+stateOrProvinceName_default = Rio de Janeiro
+localityName = Itaguai
+localityName_default = Itaguai
+organizationalUnitName = Jose Peleteiro
+organizationalUnitName_default = Jose Peleteiro
+commonName = Peleteiro
+commonName_default = Peleteiro
+commonName_max = 64
+
+[v3_req]
+keyUsage = keyEncipherment, dataEncipherment
+extendedKeyUsage = serverAuth
+subjectAltName = @alt_names
+
+[alt_names]
+DNS.1 = *.sslip.io
+DNS.2 = local.bibliaonline.com.br
+DNS.3 = local.biblebox.com
+DNS.4 = localhost
